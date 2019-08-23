@@ -4,7 +4,7 @@ from PIL import Image
 from glob import glob
 import cv2
 
-path = glob('./**/*.bmp', recursive=True)
+path = glob('./**/*.bmp', recursive=True) # Define your ekstension image here (ex: .jpg, .png, .JPG)
 
 for file in path:
     img = cv2.imread(file)
@@ -12,7 +12,7 @@ for file in path:
     # cv2.imwrite(file[:-3] + 'bmp', size)
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
     # cv2.imwrite(file[:-3] + 'jpg', gray)
-    cv2.imwrite(file[:-3] + 'bmp', img)
+    cv2.imwrite(file[:-3] + 'jpg', img) # Convert image to another format
 
 """"
 BASE_DIR = os.path.dirname(__file__)    # path project ini
