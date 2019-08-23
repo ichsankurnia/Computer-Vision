@@ -10,15 +10,15 @@ config = CFEVideoConf(cap, filepath=save_path, res='720p')
 out = cv2.VideoWriter(save_path, config.video_type, frames_per_seconds, config.dims)
 finis_time = datetime.datetime.now() + datetime.timedelta(seconds=6)
 
-while datetime.datetime.now() <= finis_time:
-# while(True):
+while datetime.datetime.now() <= finis_time: # Record just for 6 second
+# while(True):  # record untill break
     # Capture frame-by-frame
     ret, frame = cap.read()
     # frame = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     out.write(frame)
     # Display the resulting frame
     cv2.imshow('frame',frame)
-    if cv2.waitKey(1) == 27:
+    if cv2.waitKey(1) == 27: # press ESC to end record
         break
 
 # When everything done, release the capture
