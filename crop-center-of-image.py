@@ -1,7 +1,7 @@
 from glob import glob
 import cv2
 
-path = glob('./**/*.bmp', recursive=True) # Define your ekstension Image here (ex: .jpg, .png, .JPG)
+path = glob('./**/*.bmp', recursive=True) # crop all of image .bmp file in this project
 
 id = 0
 
@@ -22,7 +22,8 @@ for file in path:
         roi = img[0:h, 0:w]
 
     print(w, h)
-    cv2.imwrite('crop/img_' + str(id) + '.bmp', roi)
+    cv2.imwrite('crop/img_' + str(id) + '.jpg', roi) # cropt center of image and convert to jpg
     id +=1
+    print("Cropping Finish")
     # if id == count(file):
     #     #     break
