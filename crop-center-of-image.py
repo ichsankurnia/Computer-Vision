@@ -1,7 +1,7 @@
 from glob import glob
 import cv2
 
-path = glob('./**/*.bmp', recursive=True) # crop all of image .bmp file in this project
+path = glob('./**/*.bmp', recursive=True) # get and crop all of image .bmp file in this project
 
 id = 0
 
