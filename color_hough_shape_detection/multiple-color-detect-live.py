@@ -56,7 +56,7 @@ while True:
                 # then update the list of tracked points
                 cv2.circle(frame, (int(x), int(y)), int(radius), colors[key], 2)
                 cv2.circle(frame, (int(x), int(y)), 2, colors[key], 5)
-                cv2.putText(frame, key + " ball", (int(x - radius), int(y - radius)), cv2.FONT_HERSHEY_SIMPLEX, 0.6,
+                cv2.putText(frame, key + " object", (int(x - radius), int(y - radius)), cv2.FONT_HERSHEY_SIMPLEX, 0.6,
                             colors[key], 2)
                 print(int(x),int(y))
                 #print(center[0],center[1]) SALAH
@@ -64,9 +64,8 @@ while True:
     # show the frame to our screen
     cv2.imshow("Frame", frame)
 
-    key = cv2.waitKey(1) & 0xFF
-    # if the 'q' key is pressed, stop the loop
-    if key == ord("q"):
+    # press ESC to exit
+    if cv2.waitKey(1) == 27:
         break
 
 # cleanup the camera and close any open windows
