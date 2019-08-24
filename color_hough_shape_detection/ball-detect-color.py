@@ -2,6 +2,7 @@ import cv2
 import imutils
 import numpy as np
 
+"""Adjust your HSV Color"""
 orangeLower = (0, 50, 80)
 orangeUpper = (20, 255, 255)
 
@@ -40,6 +41,7 @@ while 1:
         if radius > 0.5:
             cv2.circle(frame, (int(x), int(y)), int(radius), orangeUpper, 2)
             cv2.circle(frame, (int(x), int(y)), 2, (0, 0, 255), 3)
+            # coordinate point of the object
             print(x,y) # 258.0 163.40261840820312
 
     cv2.imshow("colour", frame)
