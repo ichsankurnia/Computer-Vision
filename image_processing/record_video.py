@@ -1,6 +1,6 @@
 import cv2
 import datetime
-from utils import CFEVideoConf, image_resize
+from image_processing.utils import CFEVideoConf, image_resize
 
 cap = cv2.VideoCapture(0)
 save_path = 'video/video.mp4'
