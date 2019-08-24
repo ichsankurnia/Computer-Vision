@@ -1,6 +1,8 @@
 import cv2
-video = cv2.VideoCapture(1)
+
 face = cv2.CascadeClassifier('file-xml/face-detect.xml')
+
+video = cv2.VideoCapture(1)
 
 while 1:
     _,frame = video.read()
