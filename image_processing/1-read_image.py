@@ -1,6 +1,9 @@
 import cv2
 
 img = cv2.imread('img/test.jpg')
+height, width, depth = img.shape
+
+print(height,width,depth)
 
 edge = cv2.Canny(img, 70, 70) # 70 70 resolusinya, makin kecil makin banyak noisenya
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
